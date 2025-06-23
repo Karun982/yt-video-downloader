@@ -3,62 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>YouTube Downloader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background: black;
-            color: white;
-            font-family: sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background: red;
+            background: #e50914;
             color: white;
             text-align: center;
-            padding: 15px 0;
-            font-style: italic;
-            font-weight: bold;
-            
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         main {
-            text-align: center;
-            margin-top: 60px;
-            border: 2px solid white;
-            padding: 30px;
-            margin-left: 30%;
-            margin-right: 30%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .form-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            background-color: #e50914;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #c40812;
         }
         footer {
-            left: 0;
-            bottom: 0%;
-            position: fixed;
+            background-color: #111;
+            color: #bbb;
             text-align: center;
-            margin-top: 80px;
+            padding: 15px 0;
             font-size: 14px;
-            color: white;
-            background-color: red;
-            width: 100%;
-             padding: 15px 0;
+            /*position: fixed;*/
         }
     </style>
 </head>
 <body>
     <header>
-        Yt Video Downloader
+        YT Video Downloader
     </header>
 
     <main>
-       <h2> Enter the link here:</h2>
-        <form method="POST">
-            <input type="text" name="url" placeholder="YouTube link">
-            <br><br>
-            <input type="submit" value="Download">
-        </form>
+        <div class="form-box">
+            <h2>Enter the YouTube link:</h2>
+            <form method="POST">
+                <input type="text" name="url" placeholder="https://www.youtube.com/...">
+                <input type="submit" value="Download">
+            </form>
+        </div>
     </main>
 
     <footer>
-         Made with ❤️ by Karun
+        Made with ❤️ by Karun
     </footer>
-
 </body>
 </html>
+
